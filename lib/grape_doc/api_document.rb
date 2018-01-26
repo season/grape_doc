@@ -13,7 +13,7 @@ module GrapeDoc
         self.empty = true
         return
       end
-      self.path = route.route_path.gsub('(.:format)','')
+      self.path = route.route_path.gsub('(.:format)','').gsub(':version', route.route_version.to_s)
       self.resource_name = resource
       self.http_method = route.route_method
       self.description = route.route_description

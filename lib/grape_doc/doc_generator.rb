@@ -29,7 +29,7 @@ module GrapeDoc
 
     def generate
       doc_formatter = init_formatter
-      doc_dir = "#{Dir.pwd}/grape_doc"
+      doc_dir = "#{Dir.pwd}/public/grape_doc"
       FileUtils.mkdir_p(doc_dir)
 
       self.resources.each do | resource |
